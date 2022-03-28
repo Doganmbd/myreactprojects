@@ -1,15 +1,23 @@
 import React from 'react'
 
+
 const Card = (item) => {
   return (
-    <div className="container">
+ 
       <div className="card-container">
-        <h1>{item.title}</h1>
-        <img src={item.image} alt="" />
-      </div>
-      <p>{item.desc}</p>
+          <div className="title">
+            <h1 >{item.title}</h1>
+          </div>
 
-    </div>
+          <img src={item.image} alt="" />
+          
+        
+          <div className="card-over">
+            <p>{item.desc}</p> 
+          </div>
+      </div>
+    
+    
   )
 }
 
