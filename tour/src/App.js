@@ -1,7 +1,8 @@
 import Header from "./components/Header/Header";
-import Card from "./components/Main/Card";
+
 import Navbar from "./components/Navbar/Navbar";
 import "./App.scss"
+import Main from "./components/Main/Main";
 
 
 
@@ -11,7 +12,7 @@ function App(){
       
       <Navbar/>
       <Header/>
-      <Card/>
+      <Main/>
     </div>
      
     
