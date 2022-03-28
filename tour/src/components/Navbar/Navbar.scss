@@ -1,4 +1,5 @@
 @import "../../scss/variable";
+@import "../../scss/mixin";
 
 .navbar {
     width: 100%;
@@ -18,5 +19,20 @@
             color: $cardNavBgColor;
         }
         
+    }
+}
+
+
+@include media-xsm {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@include media-sm {
+    .navbar{
+        flex-direction: row;
+        text-align: center;
     }
 }
