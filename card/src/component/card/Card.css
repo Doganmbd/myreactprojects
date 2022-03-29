@@ -7,13 +7,18 @@
     display:grid;
     grid-template-rows: 10% 90% ;
     grid-template-areas: "top" "bottom";
-    border: 2px solid green;
+    
+    overflow: hidden;
 }
 
 .bars {
     height:41rem;
     width: 5rem;
-    background-color: blue ;
+    background-color: rgb(236, 80, 53) ;
+    position: relative;
+    transform:rotate(-45deg);
+    top:-40rem;
+    left:10rem;
 }
 .title{
     grid-area: top;
@@ -30,8 +35,6 @@
     padding: 1rem;
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    border: 2px solid blue;
-  
-
+    
   
 }
