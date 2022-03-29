@@ -6,7 +6,7 @@ import "./Card.css"
 const CardDiv = () => {
     return(
         <div className="card-container">
-
+            <div className="bars"></div>
             <h1 className="title">Languages</h1>
         <div className="container">
            {languages.map((item,index) => {

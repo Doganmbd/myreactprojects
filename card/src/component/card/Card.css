@@ -9,6 +9,12 @@
     grid-template-areas: "top" "bottom";
     border: 2px solid green;
 }
+
+.bars {
+    height:41rem;
+    width: 5rem;
+    background-color: blue ;
+}
 .title{
     grid-area: top;
     text-align: center ;
