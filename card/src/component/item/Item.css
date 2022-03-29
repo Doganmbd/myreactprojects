@@ -33,3 +33,13 @@
 .item-container:hover .item-img{
     transform: scale(1.5);
 }
+
+
+.list{
+    font-size: 15px;
+    list-style-position: outside;
+    padding-left: 15px;
+    text-align: left;
+    
+  
+}
