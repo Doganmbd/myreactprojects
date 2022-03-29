@@ -1,0 +1,31 @@
+.card-container{
+    height: 45rem;
+    width:25rem;
+    background-color: #f48b29;
+    margin: 0 auto;
+    border-radius: 1rem;
+    display:grid;
+    grid-template-rows: 10% 90% ;
+    grid-template-areas: "top" "bottom";
+    border: 2px solid green;
+}
+.title{
+    grid-area: top;
+    text-align: center ;
+    color:white ;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1rem;
+
+}
+
+.container {
+    grid-area: bottom;
+    padding: 1rem;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 2px solid blue;
+  
+
+  
+}

@@ -1,0 +1,35 @@
+.item-container{
+    height:90px;
+    border: 2px solid red;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: peachpuff;
+    text-align: center;
+    position:relative;
+    
+ 
+     
+}
+.item-title{
+    color: white;
+    padding: 5px;
+}
+
+.item-container:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 9px 2px #2B24B2;
+}
+
+
+
+.item-img {
+    width:65% ;
+    height:75px;
+    transition: transform 0.5s ease-out;
+    
+    
+}
+.item-container:hover .item-img{
+    transform: scale(1.5);
+}
