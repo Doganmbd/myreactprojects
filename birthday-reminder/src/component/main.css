@@ -1,0 +1,22 @@
+.container {
+    width: 50%;
+    height:50% ;
+    margin: auto;
+    background-color: purple;
+}
+
+.container-item {
+    background-color: aqua;
+    width: 50%;
+    height:50% ;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.img {
+    height:100px;
+    width: 100px;
+
+}
