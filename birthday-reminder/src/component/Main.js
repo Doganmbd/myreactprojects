@@ -1,7 +1,11 @@
 import React from 'react';
+import Button from './Button';
 import "./main.css"
 
 const Main = ({dataProps}) => {
+
+
+
     
   return (
     <div className="container">
@@ -19,6 +23,7 @@ const Main = ({dataProps}) => {
                 <img className="img" src={image} alt={name} />
                     <h3>{name}</h3>
                     <p>{age}</p>
+                    
 
                 </div>
 
