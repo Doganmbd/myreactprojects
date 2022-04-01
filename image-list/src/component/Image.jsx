@@ -5,9 +5,10 @@ const Image = ({imagesProps}) => {
     <div>
     {imagesProps.map((item) => {
       return (
-      <ul>
+      <ul key={item.id}>
         <li>
-          <img src={item.webformatURL} alt="mbd" /> 
+          <img className="ui  centered x-large circular image"  src={item.webformatURL} alt="mbd" /> 
+          
         </li>
       </ul>
       )

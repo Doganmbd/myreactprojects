@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="ui container" style = {{marginTop:"30px"}}>
       <SearchInput  onSearchSubmit={onSearchSubmitApp}/>
-      we have {images.length} images
+      <h2 class="ui center aligned icon header">we have {images.length} images</h2>
       <Image imagesProps = {images}/>
     </div>
   );

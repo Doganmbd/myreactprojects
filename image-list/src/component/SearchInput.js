@@ -45,7 +45,7 @@ const SearchInput = ({onSearchSubmit}) => {
                 <div className="results"></div>
             </div>
             </div>
-            <p>{search.entry}</p>
+            {/* <p>{search.entry}</p> */}
         
            
             <button className="ui button" type="submit">Submit</button>
