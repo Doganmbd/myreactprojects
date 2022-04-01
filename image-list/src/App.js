@@ -1,11 +1,15 @@
 
 import './App.css';
 import SearchInput from './component/SearchInput';
+import axios from "axios" ;
 
 function App() {
 
-  const onSearchSubmitApp = (app)=> {
+  const onSearchSubmitApp = async (app)=> {
     console.log(app)
+    const response = await axios
+    .get(`https://pixabay.com/api/?key=26444801-82634f94acd212e69e41c3cae&q=${app}&image_type=photo`)
+    console.log(response.data.hits)
   }
 
 
