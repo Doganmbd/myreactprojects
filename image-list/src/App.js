@@ -2,6 +2,7 @@ import {useState} from "react";
 import './App.css';
 import SearchInput from './component/SearchInput';
 import axios from "axios" ;
+import Image from "./component/Image";
 
 function App() {
 
@@ -20,17 +21,7 @@ function App() {
     <div className="ui container" style = {{marginTop:"30px"}}>
       <SearchInput  onSearchSubmit={onSearchSubmitApp}/>
       we have {images.length} images
-      <div>
-        {images.map((item) => {
-          return (
-          <ul>
-            <li>
-              <img src={item.webformatURL} alt="" /> 
-            </li>
-          </ul>
-          )
-        })}
-      </div>
+      <Image imagesProps = {images}/>
     </div>
   );
 }
