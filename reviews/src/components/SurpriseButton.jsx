@@ -1,9 +1,17 @@
 import React from 'react'
 
-const SurpriseButton = () => {
+const SurpriseButton = ({callbackFuncProp}) => {
+
+  const handleSurprise = ()=> {
+
+    return callbackFuncProp();
+    
+  }
+
+
   return (
     <div>
-        <button>Surprise Me</button>
+        <button onClick={handleSurprise}>Surprise Me</button>
     </div>
   )
 }

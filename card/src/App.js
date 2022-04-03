@@ -5,9 +5,12 @@ import HeaderApp from './component/header/Header';
 
 
 function App() {
+  const handleClick = (id) => {
+    
+  }
   return (
     <div className="App">
-      <HeaderApp />
+      <HeaderApp handleClick = {handleClick} />
       <CardPlan />
       
     </div>
