@@ -9,33 +9,39 @@ const Container = () => {
 
     
     const [index,setIndex] = useState(0)
-    const [change,setChange] = useState(reviews[index])
+    // const [change,setChange] = useState(reviews[index])
+    const [change,setChange] = useState(reviews)
+
+    console.log(change);
+
+    const {image,name,job,text} =change[index]
 
 
     const handlePrev = ()=> {
-        setIndex((index)=> {
-            let newHandlePrev = index - 1
+        setIndex((b)=> {
+            let newHandlePrev = b - 1
             return newHandlePrev
         })
         
     }
 
     const handleNext = ()=> {
-        setIndex((index)=> {
-            let newHandleNext = index + 1
+        setIndex((a)=> {
+            let newHandleNext = a + 1
             return newHandleNext
         })
     }
 
     console.log(index);
+
     
 
   return (
     <div>
-        <img src={change.image} alt="bilal" />
-        <h5 className="name"> {change.name}</h5>
-        <h4 className="title">{change.job}</h4>
-        <p className="describe">{change.text}</p>
+        <img src={image} alt="bilal" />
+        <h5 className="name"> {name}</h5>
+        <h4 className="title">{job}</h4>
+        <p className="describe">{text}</p>
         
         <div className="buttons">
             <Buttons clickPrev={handlePrev} clickNext={handleNext}/>
