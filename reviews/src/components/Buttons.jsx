@@ -3,14 +3,24 @@ import { ReactComponent as NextIcon } from "../svgs/next.svg";
 import { ReactComponent as PrevIcon } from "../svgs/previous.svg";
 
 
-const Buttons = () => {
+const Buttons = ({clickPrev,clickNext}) => {
+
+    const handleNext = () => {
+        return clickNext()
+    }
+
+    const handlePrev = ()=> {
+        return clickPrev()
+    }
+
+
   return (
     <div>
       <button>
-        <PrevIcon />
+        <PrevIcon onClick={handlePrev} />
       </button>
       <button>
-        <NextIcon />
+        <NextIcon onClick={handleNext}/>
       </button>
 
     </div>
