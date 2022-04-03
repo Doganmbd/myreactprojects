@@ -38,12 +38,11 @@ const Container = () => {
     });
   };
 
-
   const callbackFunc = () => {
-    const showCallback = Math.floor(Math.random() * (change.length))
+    const showCallback = Math.floor(Math.random() * change.length);
     console.log(showCallback);
-    setIndex(showCallback)
-  }
+    setIndex(showCallback);
+  };
 
   console.log(index);
 
@@ -58,7 +57,10 @@ const Container = () => {
         <Buttons clickPrev={handlePrev} clickNext={handleNext} />
       </div>
       <div className="buttonsTwo">
-        <SurpriseButton surpriseNumber = {change} callbackFuncProp = {callbackFunc}  />
+        <SurpriseButton
+          surpriseNumber={change}
+          callbackFuncProp={callbackFunc}
+        />
       </div>
     </div>
   );
