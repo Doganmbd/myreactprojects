@@ -43,7 +43,7 @@ export const NavbarRight = styled.div `
 
 
     @media (max-width: 768px) {
-      overflow: hidden;
+      /* overflow: hidden; */
       flex-direction: column;
       width: 100%;
       transition: max-height 0.3s ease-in-out;
@@ -58,15 +58,25 @@ export const NavbarRightLink = styled(Link) `
     text-align:center;
     transition:all 0.2s ease-in-out;
     padding:1rem ;
+    cursor:pointer;
 
     &:hover{
       color:aqua;
       font-weight:bold;
+
+   
     }
+    @media (max-width: 768px) {
+      border: 3px solid red;
+      width: 100%;
+      background-color: #e1f1dd;
+      margin-top: 5px;
+      border-radius: 15px;
+
 
 `
 
 export const NavbarRightIcon = styled.div `
-
+      
 
 `
