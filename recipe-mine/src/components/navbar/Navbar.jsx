@@ -1,18 +1,36 @@
 import React from 'react';
-import {MenuLink} from "./NavbarStyle"
+import {Nav,LogoLink,NavbarRight,NavbarRightLink,NavbarRightIcon} from "./NavbarStyle";
+
+
 
 const Navbar = () => {
+
+const handleGithub = () => {
+
+  window.location.href = "https://github.com/Doganmbd"
+
+}
   return (
-    <Navbar>
-{/*       <LogoLink to="/">
+    <div>
+    <Nav>
+      <LogoLink to="/">
+          <i>{"<M.B.D>"}</i>
+          <span>RECIPE</span>
+      </LogoLink>
 
-      </LogoLink> */}
+      <NavbarRightIcon>
 
-      <MenuLink to="/about">ABOUT</MenuLink>
+      </NavbarRightIcon>
 
+      <NavbarRight> 
+        <NavbarRightLink to="/about">About</NavbarRightLink>
+        <NavbarRightLink to="" onClick={handleGithub}>Github</NavbarRightLink>
+        <NavbarRightLink to="/login">Logout</NavbarRightLink>
 
-    </Navbar>
+      </NavbarRight>
+
+    </Nav>
+    </div>
   )
 }
-
 export default Navbar
