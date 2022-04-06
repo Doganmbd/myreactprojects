@@ -20,7 +20,10 @@ const About = () => {
         <h2>Hi , I am Mustafa Bilal DOĞAN</h2>
         <h3>
           I am a front-end developer and I am still developing myself in the
-          field of IT. This is such a field that it is like the ocean. I think I
+          field of IT. This is such a field that it is like the ocean.
+        </h3>
+        <h3>
+          I think I
           will try to improve myself in this field for the rest of my life.
         </h3>
 

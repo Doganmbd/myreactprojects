@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
+  width: 100%;
+  overflow-x: hidden;
+  padding: auto;
+  margin: auto;
   background-color: rgba(50, 150, 200, 0.5);
   border-radius: 10px;
   display: flex;
@@ -10,7 +14,7 @@ export const AboutContainer = styled.div`
   flex-direction: column;
   padding-bottom: 2rem;
   line-height: 2;
-  min-height: calc(100vh - 80px);
+
   span {
     color: white;
     font-family: "Girassol", cursive;
@@ -30,8 +34,12 @@ export const HeaderContainer = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  width: 100%;
+  flex-wrap: wrap;
   border: 1px solid white;
+  text-align: left;
+  margin: auto;
+  text-indent: 2rem;
+  padding: 0 1rem;
 
   a {
     font-size: 20px;
