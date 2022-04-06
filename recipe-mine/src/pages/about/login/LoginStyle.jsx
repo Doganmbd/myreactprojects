@@ -66,3 +66,10 @@ padding:0 1rem;
 
 ` */
 
+export const SubmitForm = styled.form`
+display:flex;
+flex-direction:column;
+
+
+
+`
