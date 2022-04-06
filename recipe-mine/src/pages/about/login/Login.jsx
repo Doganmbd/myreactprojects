@@ -19,8 +19,8 @@ const Login = () => {
               M.B.D Recipe
           </FormHeader>
           <SubmitForm onSubmit={handleSubmitForm}>
-              <FormInput type="text" placeholder="username"></FormInput>
-              <FormInput type="password" placeholder="password"></FormInput>
+              <FormInput type="text" placeholder="username" required></FormInput>
+              <FormInput type="password" placeholder="password" required></FormInput>
               <FormButton>
                 Login
               </FormButton>
