@@ -8,7 +8,7 @@ import {
 } from "./NavbarStyle";
 
 const Navbar = () => {
-  const [handleIsOpen, setHandleIsOpen] = useState(true);
+  const [isOpen, setHandleIsOpen] = useState(false);
 
   const handleGithub = () => {
     window.location.href = "https://github.com/Doganmbd";
@@ -21,9 +21,16 @@ const Navbar = () => {
           <span>RECIPE</span>
         </LogoLink>
 
-        <NavbarRightIcon></NavbarRightIcon>
-
-        <NavbarRight isOpen={handleIsOpen}>
+        <NavbarRightIcon onClick={() => setHandleIsOpen(!isOpen)}>
+          
+          <span />
+          <span />
+          <span />
+        </NavbarRightIcon>
+        {console.log(isOpen)}
+        
+          
+        <NavbarRight isOpen={isOpen}>
           <NavbarRightLink to="/about">About</NavbarRightLink>
           <NavbarRightLink to="" onClick={handleGithub}>
             Github
