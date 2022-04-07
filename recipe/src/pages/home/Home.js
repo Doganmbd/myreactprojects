@@ -19,6 +19,7 @@ const Home = () => {
   const getData = async () => {
     if (query !== '') {
       const result = await axios.get(url);
+      console.log(result);
       console.log(result.data.hits);
       if (result.data.more) {
         console.log('no food a this name');

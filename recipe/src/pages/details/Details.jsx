@@ -7,7 +7,6 @@ import {
     IngContainer,
     OtherPart,
   } from './DetailsStyle';import {useLocation} from "react-router-dom"
-import dietSvg from "../../assets/diet.svg"
 
 
 const Details = (props) => {
@@ -18,7 +17,7 @@ const Details = (props) => {
        <DetailContainer>
            <HeaderContainer>
                <h1>{recipe.label}</h1>
-               <img src={dietSvg}/>
+               
            </HeaderContainer>
 
             <DetailPart>

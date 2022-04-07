@@ -3,14 +3,14 @@ import {
   AboutContainer,
   HeaderContainer,
   InfoContainer,
-  StyledImage,
+  
 } from './AboutStyle';
-import codingSvg from '../../assets/coding.svg';
+
 
 const About = () => {
   return (
     <AboutContainer>
-      <StyledImage src={codingSvg} />
+     
       <HeaderContainer>
         <h1>
           About Software Developer <span>Barry</span>{' '}

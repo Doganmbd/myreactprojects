@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormContainer, Header, LoginContainer, StyledButton, StyledForm, StyledImg, StyledInput } from './LoginStyles'
-import mealSvg from "../../assets/meal.svg"
+
 
 const Login = () => {
     const handleSubmit=(event)=>{
@@ -11,7 +11,7 @@ const Login = () => {
     return (
      <LoginContainer>
          <FormContainer>
-         <StyledImg src={mealSvg}/>
+         
          <Header>{"<Clarusway/>"}Recipe</Header>
 
         <StyledForm onSubmit={handleSubmit}>
