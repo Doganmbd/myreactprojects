@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import veri from "../src/components/Data";
 import Task from "./components/Task";
+import AddTask from "./components/AddTask";
 
 
 function App() {
@@ -22,7 +23,9 @@ const deleteDiv = (itemId) => {
   return (
     <div className="container">
       <Header />
+      <AddTask/>
       <Task deleteDiv={deleteDiv} data={data}/>
+      
     </div>
   );
 }
