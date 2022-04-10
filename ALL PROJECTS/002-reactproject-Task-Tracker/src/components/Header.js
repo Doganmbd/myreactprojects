@@ -1,30 +1,34 @@
-import {useState} from 'react';
-import AddTask from './AddTask';
-import Button from './Button';
+// import PropTypes from "prop-types";
+import Button from "./Button";
 
-
-
-const Header = ( ) => {
-
-  const [addTask, setAddTask] = useState(true)
-
-    const handleClickButton = ()=> {
-        setAddTask(!addTask)
-    }
-
-
+const Header = ({ title, showAddTask, toggleShow }) => {
+  // const handleClick = () => {
+  //   console.log("Click with handle from HEader");
+  // };
   return (
     <div className="header">
-        <h1>Task Tracker</h1>
-        <Button 
-        text = "Add Task Tracker"
+      <h1>{title}</h1>
+      {/* <Button
         color="purple"
-        handleClickButton={handleClickButton}
-        
-        />
-        <AddTask handleClickButton={addTask}  />
+        text="Show Add Task Bar"
+        handleClick={handleClick}
+      /> */}
+      <Button
+        color={showAddTask ? "red" : "purple"}
+        text={showAddTask ? "Close Add Task Bar" : "Show Add Task Bar"}
+        toggleShow={toggleShow}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+// Header.propTypes = {
+//   title: PropTypes.string.isRequired,
+// };
+
+// Header.defaultProps = {
+//   title: "Task Tracker",
+// };
+
+// title = "Task Default"  in props area
+export default Header;

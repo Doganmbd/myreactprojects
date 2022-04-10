@@ -1,37 +1,48 @@
-import React from 'react'
+import { useState } from "react";
 
-const AddTask = ({handleClickButton}) => {
+const AddTask = ({ addTask }) => {
+  const [text, setText] = useState("");
+  const [day, setDay] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    addTask({ text, day, isDone: false });
+    setText("");
+    setDay("");
+
+    // console.log(text);
+    // console.log(day);
+  };
+
   return (
-      
-
-    <div>
-        {handleClickButton &&
-    <form className="add-form">
-        <div className="form-control">
-            <label htmlFor="task">Task</label>
-            <input type="text" 
-            placeholder="Add task"
-            id="task"
-            name="task"
-            required
-            />
-        </div>
-        <div className="form-control">
-            <label htmlFor="day">Day&Time</label>
-            <input type="text" 
-            placeholder="Add Day&Time"
-            id="day"
-            name="day"
-            required
-            />
-        </div>
-        <button className="btn btn-block" type="submit">Add Task</button>
+    <form className="add-form" onSubmit={onSubmit}>
+      <div className="form-control">
+        <label htmlFor="task">Task</label>
+        <input
+          id="task"
+          name="text"
+          type="text"
+          placeholder="AddTask"
+          required
+          onChange={(e) => setText(e.target.value)}
+          value={text}
+        />
+      </div>
+      <div className="form-control">
+        <label htmlFor="day">Day & Time</label>
+        <input
+          id="day"
+          name="day"
+          type="text"
+          placeholder="Add Day & Time"
+          required
+          onChange={(e) => setDay(e.target.value)}
+          value={day}
+        />
+      </div>
+      <input type="submit" value="Save Task" className="btn btn-block" />
     </form>
-    
-}
-</div>
+  );
+};
 
-  )
-}
-
-export default AddTask
+export default AddTask;

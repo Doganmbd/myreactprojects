@@ -1,31 +1,55 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/Header";
-import veri from "../src/components/Data";
-import Task from "./components/Task";
 import AddTask from "./components/AddTask";
-
+import Header from "./components/Header";
+import Tasks from "./components/Tasks";
 
 function App() {
-  const [data, setData] = useState(veri)
+  const [tasks, setTasks] = useState([]);
 
+  const [showAddTask, setShowAddTask] = useState(false);
 
-const deleteDiv = (itemId) => {
+  // DELETE TASK
+  const deleteTask = (deletedTaskId) => {
+    // console.log("delete Task", deletedTaskId);
+    setTasks(tasks.filter((task) => task.id !== deletedTaskId));
+  };
 
-  setData(data.filter((allData)=> {
-    return(
-      allData.id !== itemId
-    )
-  }))
+  // ADD TASK
+  const addTask = (newTask) => {
+    const id = Math.floor(Math.random() * 1000 + 1);
+    const addNewTask = { id, ...newTask };
+    setTasks([...tasks, addNewTask]);
+  };
 
-}
+  // TOGGLE DONE
+  const toggleDone = (toggleDoneId) => {
+    // console.log("double click", toggleDoneId);
+    setTasks(
+      tasks.map((task) =>
+        task.id === toggleDoneId ? { ...task, isDone: !task.isDone } : task
+      )
+    );
+  };
+
+  // TOGGLESHOW
+  const toggleShow = () => setShowAddTask(!showAddTask);
 
   return (
     <div className="container">
-      <Header />
-      
-      <Task deleteDiv={deleteDiv} data={data}/>
-      
+      <Header
+        title="TASK TRACKER"
+        showAddTask={showAddTask}
+        toggleShow={toggleShow}
+      />
+
+      {showAddTask && <AddTask addTask={addTask} />}
+
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} deleteTask={deleteTask} toggleDone={toggleDone} />
+      ) : (
+        <h2 style={{ textAlign: "center" }}>NO TASK TO SHOW</h2>
+      )}
     </div>
   );
 }

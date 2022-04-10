@@ -1,24 +1,20 @@
-import React from 'react';
-import {TiDelete} from "react-icons/ti"
-
-const Duty = ({data,deleteDiv}) => {
+import { FaTimes } from "react-icons/fa";
+const Duty = ({ duty, deleteTask, toggleDone }) => {
   return (
-    <div>
-        {data.map((item)=> {
-            return(
-                <div key={item.id} className="task">
-                    <h3>{item.text} <TiDelete 
-                    
-                    onClick={()=> deleteDiv(item.id)}
-                    style={{color:"red", fontSize:"2rem"}}/> </h3>
-                    <p>{item.day} </p>
-                    
-                </div>
-            )
-        })}
-        
+    <div
+      className={`task ${duty.isDone ? "done" : ""}`}
+      onDoubleClick={() => toggleDone(duty.id)}
+    >
+      <h3>
+        {duty.text}{" "}
+        <FaTimes
+          style={{ color: "red", cursor: "pointer" }}
+          onClick={() => deleteTask(duty.id)}
+        />
+      </h3>
+      <p>{duty.day}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Duty
+export default Duty;
