@@ -23,7 +23,7 @@ const deleteDiv = (itemId) => {
   return (
     <div className="container">
       <Header />
-      <AddTask/>
+      
       <Task deleteDiv={deleteDiv} data={data}/>
       
     </div>

@@ -1,11 +1,15 @@
-import React from 'react';
+import {useState} from 'react';
+import AddTask from './AddTask';
 import Button from './Button';
+
 
 
 const Header = ( ) => {
 
+  const [addTask, setAddTask] = useState(true)
+
     const handleClickButton = ()=> {
-        console.log("buton tıkladım");
+        setAddTask(!addTask)
     }
 
 
@@ -18,7 +22,7 @@ const Header = ( ) => {
         handleClickButton={handleClickButton}
         
         />
-
+        <AddTask handleClickButton={addTask}  />
     </div>
   )
 }

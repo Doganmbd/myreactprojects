@@ -1,8 +1,11 @@
 import React from 'react'
 
-const AddTask = () => {
+const AddTask = ({handleClickButton}) => {
   return (
+      
 
+    <div>
+        {handleClickButton &&
     <form className="add-form">
         <div className="form-control">
             <label htmlFor="task">Task</label>
@@ -22,10 +25,12 @@ const AddTask = () => {
             required
             />
         </div>
-
         <button className="btn btn-block" type="submit">Add Task</button>
-
     </form>
+    
+}
+</div>
+
   )
 }
 
