@@ -1,14 +1,16 @@
 import React from 'react';
 import "./App.css";
-import Header from './components/Header';
+import FormBox from './components/FormBox';
+import FormControl from "./components/FormControl";
+
+
 
 const App = () => {
   return (
     <div>
-      <Header 
-      text="Task Tracker"
-      
-      />
+     <FormBox/>
+     <FormControl/>
+    
     </div>
   )
 }
