@@ -6,7 +6,7 @@ const Duty = ({ duty, deleteTask, toggleDone }) => {
       onDoubleClick={() => toggleDone(duty.id)}
     >
       <h3>
-        {duty.text}{" "}
+        {duty.id} - ) {duty.text}{" "}
         <FaTimes
           style={{ color: "red", cursor: "pointer" }}
           onClick={() => deleteTask(duty.id)}
