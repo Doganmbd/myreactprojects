@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AddTask from "./components/AddTask";
+import DeleteButton from "./components/DeleteButton";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
@@ -67,6 +68,7 @@ function App() {
       ) : (
         <h2 style={{ textAlign: "center" }}>NO TASK TO SHOW</h2>
       )}
+      <DeleteButton setTasks={setTasks}/>
     </div>
   );
 }
