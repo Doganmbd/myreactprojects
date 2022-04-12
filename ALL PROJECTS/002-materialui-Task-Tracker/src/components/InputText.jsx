@@ -18,7 +18,11 @@ const handleChangeInput = (e) => {
     
 }
 
-const handleSubmitForm = () => {
+const handleSubmitForm = (e) => {
+  e.preventDefault();
+  onClickButtonInput(text, day)
+
+
 
 }
 
