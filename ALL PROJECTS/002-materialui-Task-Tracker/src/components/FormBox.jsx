@@ -1,35 +1,21 @@
-import {useState} from 'react'
-import Header from './Header'
-import InputText from './InputText'
+import { useState } from "react";
+import Header from "./Header";
+import InputText from "./InputText";
 
 const FormBox = () => {
+  const [show, setShow] = useState(false);
 
-    const [show, setShow] = useState(false);
-    const [buton,setButon] = useState(true)
-
-    // BUTTON CHANGE
-    const handleButtonClick = () => {
-        setShow(!show)
-      }
-    
-      // INPUT TEXT VALUE
-      const handleChangeInput = (e) => {
-        console.log(e.target.value);
-    }
-
-    // BUTTON SUBMIT
-    const onClickButtonInput = () => {
-        setButon(buton)
-       
-    }
+  // BUTTON CHANGE
+  const handleButtonClick = () => {
+    setShow(!show);
+  };
 
   return (
     <div>
-        <Header handleButtonClick={handleButtonClick}/>
-        {show && <InputText handleChangeInput={handleChangeInput} onClickButtonInput={onClickButtonInput}/>  }
-        
+      <Header handleButtonClick={handleButtonClick} />
+      {show && <InputText />}
     </div>
-  )
-}
+  );
+};
 
-export default FormBox
+export default FormBox;
