@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import AddTask from "./components/AddTask";
 import DeleteButton from "./components/DeleteButton";
@@ -17,10 +17,18 @@ function App() {
 
   //* fetch işlemleri
 
-  const fetchTasks = async ()=> {
-    const response = await fetch(baseUrl);
-    console.log(response);
-  }
+  useEffect(() => {
+    const fetchTasks = async ()=> {
+      const response = await fetch(baseUrl);
+      const data = await response.json();
+      console.log(data);
+    }
+  
+    fetchTasks();
+
+  }, [])
+  
+
 
 
   // DELETE TASK

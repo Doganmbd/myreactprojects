@@ -6,6 +6,9 @@
 
 4-baseUrl oluşturuyorum . axios içine de direk oluşturabilirim ama kalabalık etmesin diye baseUrl oluşturuyorum.
 
-5- CRUD işlemleri yapacam create,read,update,delete. ilkin read yapacaz.fetch yapıyoruz.
+5- CRUD işlemleri yapacam create,read,update,delete. ilkin read yapacaz.fetch yapıyoruz.fetch baseUrl ile yakalıyorum ve json formatına çeviriyorum.Ve datalarımı görüyorum.
 
-6- data mın ilk andan gelmesini istiyorum yani click vb. şeyler yapmadan sayfa açılır açılmaz datanın gelmesini istersem useEffect kullanmalıyım.fetch işlemlerimi useEffect in dışında yapmam lazım ve useEffect içinde fonksiyonumu çağırmam lazım çünkü ben fetch işlemlerini başka yerlerde de kullanacam. eseEffect scope dışında da kullanmak istediğim için dışarda oluşturuyorum.
+6- data mın ilk andan gelmesini istiyorum yani click vb. şeyler yapmadan sayfa açılır açılmaz datanın gelmesini istersem useEffect kullanmalıyım.
+
+useEffect içinde fonksiyonumu çağırmam lazım ve fetch işlemlerimi useEffect in dışında yapmam lazım çünkü ben fetch işlemlerini başka yerlerde de kullanacam. eseEffect scope dışında da kullanmak istediğim için dışarda oluşturuyorum.
+
