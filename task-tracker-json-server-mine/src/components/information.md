@@ -1,3 +1,5 @@
+localimizde fake api oluşturup get,post ,delete işlemlerini yapacam.
+
 1 - json server oluşturuyorum ve yüklüyorum. npm i jason-server.
 
 2 - packet-json da scriptlerin en altına "server" : "json-server --watch db.json --port 5000" , yeni bir server ayağı kaldıracam backend gibi olacak .
@@ -23,6 +25,18 @@ ekranda yazdırmak için setTask fonk içine dat mı koyuyorum ve backend kısm�
 9- addTask işlemini backend kısmıyla yapacam.backend data gönderecem dolayısıyla  post yapmam gerekiyor.
 
 ezberlemene gerek yok [developer mozilla using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) sayfasına git . başta fetch ile yapıyorum.axios a göre ne kadar zor olduğunu görelim.
+
+10- axios ile addtask yapıyorum içine Url ve göndermek istediğimiz data yı ekleyip backende gönderiyorum.
+
+Not : fetchTasks fonk her zaman çağırmamın sebebi güncel verileri her zaman görmek için çağırıyorum.
+
+11- backenden axios ile delete işlemlerini yapacam.
+
+
+
+
+
+
 
 
 

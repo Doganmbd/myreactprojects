@@ -71,10 +71,18 @@ function App() {
   }; */
   
   // DELETE TASK
-  const deleteTask = (deletedTaskId) => {
+
+  const deleteTask = async (deletedTaskId)=> {
+    console.log(deletedTaskId);
+    await axios.delete(`${baseUrl}/${deletedTaskId}`)
+    fetchTasks();
+  }
+
+
+/*   const deleteTask = (deletedTaskId) => {
     // console.log("delete Task", deletedTaskId);
     setTasks(tasks.filter((task) => task.id !== deletedTaskId));
-  };
+  }; */
 
   // TOGGLE DONE
   const toggleDone = (toggleDoneId) => {
