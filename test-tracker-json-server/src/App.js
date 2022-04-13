@@ -6,10 +6,10 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);   /* boş array olarak bırak */
   const [showAddTask, setShowAddTask] = useState(false);
 
-  const baseUrl = "http://localhost:5000/tasks";
+  const baseUrl = "http://localhost:5000/tasks"; /* istekleimizi buraya atacaz. */
 
   //* CRUD Create Read Update Delete
 
