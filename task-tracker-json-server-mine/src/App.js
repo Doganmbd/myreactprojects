@@ -44,20 +44,31 @@ function App() {
   useEffect(() => {
     fetchTasks();
   }, []);
+  
+  // ADD TASK
+  const addTask = async (newTask)=> {
+    const response = await fetch(baseUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newTask),
+    })
+    await response.json();
+    fetchTasks();
+  }
 
 
-
+/*   const addTask = (newTask) => {
+    const id = Math.floor(Math.random() * 1000 + 1);
+    const addNewTask = { id, ...newTask };
+    setTasks([...tasks, addNewTask]);
+  }; */
+  
   // DELETE TASK
   const deleteTask = (deletedTaskId) => {
     // console.log("delete Task", deletedTaskId);
     setTasks(tasks.filter((task) => task.id !== deletedTaskId));
-  };
-
-  // ADD TASK
-  const addTask = (newTask) => {
-    const id = Math.floor(Math.random() * 1000 + 1);
-    const addNewTask = { id, ...newTask };
-    setTasks([...tasks, addNewTask]);
   };
 
   // TOGGLE DONE

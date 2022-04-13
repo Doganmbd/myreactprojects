@@ -19,3 +19,12 @@ ekranda yazdırmak için setTask fonk içine dat mı koyuyorum ve backend kısm�
 7- hatalarımı yakalamak için try-catch kullanıyorum
 
 8 - fetch işlemini axios ile yapacam çok daha kolay ve kısa bir yol.json ile uğraşmam gerek olmuyor.
+
+9- addTask işlemini backend kısmıyla yapacam.backend data gönderecem dolayısıyla  post yapmam gerekiyor.
+
+ezberlemene gerek yok [developer mozilla using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) sayfasına git . başta fetch ile yapıyorum.axios a göre ne kadar zor olduğunu görelim.
+
+
+
+
+
