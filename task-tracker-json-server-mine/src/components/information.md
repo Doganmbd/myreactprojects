@@ -17,3 +17,5 @@ useEffect , [] ile sadece ilk açıldığında çağır bir daha çağırma anla
 ekranda yazdırmak için setTask fonk içine dat mı koyuyorum ve backend kısmındaki data mı ekranda görebiliyorum.
 
 7- hatalarımı yakalamak için try-catch kullanıyorum
+
+8 - fetch işlemini axios ile yapacam çok daha kolay ve kısa bir yol.json ile uğraşmam gerek olmuyor.

@@ -4,6 +4,7 @@ import AddTask from "./components/AddTask";
 import DeleteButton from "./components/DeleteButton";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
+import axios from "axios";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -17,23 +18,35 @@ function App() {
   //* fetch işlemleri
 
   //* read işlemi yapıyorum
-  const fetchTasks = async () => {
+
+/*   const fetchTasks = async () => {
   try {
     const response = await fetch(baseUrl);
     const data = await response.json();
-    /* console.log(data); */
+    //* console.log(data); 
     setTasks(data)
   } catch (error) {
     alert(error);
   }
   }
-  
+   */
+
+  //* fetch işlemleri axios ile yapıyorum
+  const fetchTasks = async ()=> {
+    // const response = await axios.get(baseUrl);
+    // console.log(response.data);
+    // console.log(response);
+    //setTasks(response.data);
+    const {data}= await axios.get(baseUrl);
+    setTasks(data);
+  }
+
   useEffect(() => {
     fetchTasks();
   }, []);
 
 
-  
+
   // DELETE TASK
   const deleteTask = (deletedTaskId) => {
     // console.log("delete Task", deletedTaskId);

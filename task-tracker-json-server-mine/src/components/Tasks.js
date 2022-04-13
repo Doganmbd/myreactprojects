@@ -4,7 +4,7 @@ const Tasks = ({ tasks, deleteTask, toggleDone }) => {
   return (
     <div>
       {tasks.map((task) => (
-        <Duty duty={task} deleteTask={deleteTask} toggleDone={toggleDone} />
+        <Duty key={task.id} duty={task} deleteTask={deleteTask} toggleDone={toggleDone} />
       ))}
     </div>
   );
