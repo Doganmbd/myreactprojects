@@ -17,12 +17,12 @@ function App() {
 
   //* fetch işlemleri
 
+  const fetchTasks = async ()=> {
+    const response = await fetch(baseUrl);
+    const data = await response.json();
+    console.log(data);
+  }
   useEffect(() => {
-    const fetchTasks = async ()=> {
-      const response = await fetch(baseUrl);
-      const data = await response.json();
-      console.log(data);
-    }
   
     fetchTasks();
 
