@@ -32,6 +32,8 @@ Not : fetchTasks fonk her zaman çağırmamın sebebi güncel verileri her zaman
 
 11- backenden axios ile delete işlemlerini yapacam.
 
+12 - backend den üstünü çizme işlemini yapacam.put ile update işlemini yapacam.put işleminde bütün data yı update ediyoruz ama patch işleminde sadece istediğiniz field i değiştiriyoruz.
+
 
 
 

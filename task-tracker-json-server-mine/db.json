@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "text": "Wash Car",
-      "day": "Feb 10th at 3:00pm",
-      "isDone": false,
-      "id": 2
-    },
-    {
       "text": "Clean Room",
       "day": "Feb 7th at 10:00pm",
       "isDone": false,
@@ -23,6 +17,12 @@
       "day": "7898",
       "isDone": false,
       "id": 6
+    },
+    {
+      "text": "bilal",
+      "day": "12",
+      "isDone": false,
+      "id": 7
     }
   ]
 }
