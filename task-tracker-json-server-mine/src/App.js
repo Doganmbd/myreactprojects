@@ -6,26 +6,22 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
 function App() {
-  const [tasks, setTasks] = useState([  {
-    id: 1,
-    text: "Study React Pre-Class Notes",
-    day: "Dec 12th at 2:30pm",
-    isDone: false,
-  },
-  {
-    id: 2,
-    text: "Feed the Dog",
-    day: "Dec 13th at 1:30pm",
-    isDone: true,
-  },
-  {
-    id: 3,
-    text: "Attend In-Class",
-    day: "Dec 14th at 3:00pm",
-    isDone: false,
-  },]);
+  const [tasks, setTasks] = useState([]);
 
   const [showAddTask, setShowAddTask] = useState(false);
+
+
+  const baseUrl = "http://localhost:5000/tasks" ;
+
+  //*CRUD create,read,update,delete
+
+  //* fetch işlemleri
+
+  const fetchTasks = async ()=> {
+    const response = await fetch(baseUrl);
+    console.log(response);
+  }
+
 
   // DELETE TASK
   const deleteTask = (deletedTaskId) => {
@@ -68,7 +64,7 @@ function App() {
       ) : (
         <h2 style={{ textAlign: "center" }}>NO TASK TO SHOW</h2>
       )}
-      <DeleteButton setTasks={setTasks}/>
+      <DeleteButton setTasks={setTasks} />
     </div>
   );
 }

@@ -2,4 +2,10 @@
 
 2 - packet-json da scriptlerin en altına "server" : "json-server --watch db.json --port 5000" , yeni bir server ayağı kaldıracam backend gibi olacak .
 
-3 - server ayağa kaldıracaz.localhost 5000 ayağı kaldıracaz. npm run server .
+3 - server ayağa kaldıracaz.localhost 5000 ayağı kaldıracaz. npm run server .db.json oluşur.
+
+4-baseUrl oluşturuyorum . axios içine de direk oluşturabilirim ama kalabalık etmesin diye baseUrl oluşturuyorum.
+
+5- CRUD işlemleri yapacam create,read,update,delete. ilkin read yapacaz.fetch yapıyoruz.
+
+6- data mın ilk andan gelmesini istiyorum yani click vb. şeyler yapmadan sayfa açılır açılmaz datanın gelmesini istersem useEffect kullanmalıyım.fetch işlemlerimi useEffect in dışında yapmam lazım ve useEffect içinde fonksiyonumu çağırmam lazım çünkü ben fetch işlemlerini başka yerlerde de kullanacam. eseEffect scope dışında da kullanmak istediğim için dışarda oluşturuyorum.
