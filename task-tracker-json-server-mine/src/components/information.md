@@ -12,3 +12,8 @@
 
 useEffect içinde fonksiyonumu çağırmam lazım ve fetch işlemlerimi useEffect in dışında yapmam lazım çünkü ben fetch işlemlerini başka yerlerde de kullanacam. eseEffect scope dışında da kullanmak istediğim için dışarda oluşturuyorum.
 
+useEffect , [] ile sadece ilk açıldığında çağır bir daha çağırma anlamındaydı.
+
+ekranda yazdırmak için setTask fonk içine dat mı koyuyorum ve backend kısmındaki data mı ekranda görebiliyorum.
+
+7- hatalarımı yakalamak için try-catch kullanıyorum

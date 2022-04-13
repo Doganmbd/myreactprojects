@@ -10,27 +10,30 @@ function App() {
 
   const [showAddTask, setShowAddTask] = useState(false);
 
-
-  const baseUrl = "http://localhost:5000/tasks" ;
+  const baseUrl = "http://localhost:5000/tasks";
 
   //*CRUD create,read,update,delete
 
   //* fetch işlemleri
 
-  const fetchTasks = async ()=> {
+  //* read işlemi yapıyorum
+  const fetchTasks = async () => {
+  try {
     const response = await fetch(baseUrl);
     const data = await response.json();
-    console.log(data);
+    /* console.log(data); */
+    setTasks(data)
+  } catch (error) {
+    alert(error);
   }
+  }
+  
   useEffect(() => {
-  
     fetchTasks();
+  }, []);
 
-  }, [])
+
   
-
-
-
   // DELETE TASK
   const deleteTask = (deletedTaskId) => {
     // console.log("delete Task", deletedTaskId);
