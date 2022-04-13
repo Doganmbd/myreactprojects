@@ -46,7 +46,7 @@ function App() {
   }, []);
   
   // ADD TASK
-  const addTask = async (newTask)=> {
+/*   const addTask = async (newTask)=> {
     const response = await fetch(baseUrl, {
       method: 'POST',
       headers: {
@@ -55,6 +55,11 @@ function App() {
       body: JSON.stringify(newTask),
     })
     await response.json();
+    fetchTasks();
+  } */
+
+  const addTask =async (newTask)=> {
+    const response = await axios.post(baseUrl,newTask);
     fetchTasks();
   }
 
