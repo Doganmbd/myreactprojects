@@ -34,6 +34,8 @@ Not : fetchTasks fonk her zaman çağırmamın sebebi güncel verileri her zaman
 
 12 - backend den üstünü çizme işlemini yapacam.put ile update işlemini yapacam.put işleminde bütün data yı update ediyoruz ama patch işleminde sadece istediğiniz field i değiştiriyoruz.
 
+13- CRUD işlemlerinin tamamını backend den yaptım.işlem ler tamamdır.
+
 
 
 

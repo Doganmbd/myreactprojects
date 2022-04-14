@@ -3,7 +3,7 @@
     {
       "text": "Clean Room",
       "day": "Feb 7th at 10:00pm",
-      "isDone": false,
+      "isDone": true,
       "id": 3
     },
     {
@@ -17,12 +17,6 @@
       "day": "7898",
       "isDone": false,
       "id": 6
-    },
-    {
-      "text": "bilal",
-      "day": "12",
-      "isDone": false,
-      "id": 7
     }
   ]
 }

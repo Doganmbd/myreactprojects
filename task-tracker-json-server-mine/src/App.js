@@ -89,6 +89,7 @@ function App() {
 
   const toggleDone = async (toggleDoneId) => {
     const { data } = await axios.get(`${baseUrl}/${toggleDoneId}`);
+    console.log(toggleDoneId);
     console.log(data);
     // const updatedTask = { ...data, isDone: !data.isDone };
     // await axios.put(`${baseUrl}/${toggleDoneId}`, updatedTask);
