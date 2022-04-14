@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import Products from "./pages/Products";
+ 
 import NotFound from "./pages/NotFound";
 import Details from "./pages/Details";
 import Checkout from "./pages/Checkout";
