@@ -14,6 +14,7 @@ export default function Navbar() {
       <Button variant="contained"><Link to="/" >Home</Link></Button>
       <Button variant="contained"><Link to="/about" >About</Link></Button>
       <Button variant="contained"><Link to="/contact" >Contact</Link></Button>
+      <Button variant="contained"><Link to="/users" >USers</Link></Button>
         
         
       
