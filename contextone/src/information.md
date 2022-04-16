@@ -15,3 +15,4 @@
 
 7-Cunstom Hooks : kendi hookumuzu yazmak .
 
+Önemli Not: Eğer alt component den parent componente veri göndermek istiyorsam . Alt componente arrow fonk. ile event gönderebiliyorum ama eğer arrow func. şeklinde yazmasamda parent componente event olarak yine alabiliyorum.ör : event.target.id
